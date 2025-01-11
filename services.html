@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Bus Reservation System</title>
+    <link rel="icon" href="bus129_89.jpeg">
+    <style>
+        html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #f4f4f9;
+    color: #000000;
+    position: relative; /* Ensure the pseudo-element is positioned relative to the body */
+    /* overflow: hidden Prevent scrollbars from showing if the pseudo-element is larger */
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Use fixed positioning to cover the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ensure it covers the full viewport width */
+    height: 100vh; /* Ensure it covers the full viewport height */
+    background-image: url('image.jpg');
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center;
+    filter: blur(8px); /* Adjust the blur intensity */
+    z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+        h1, h2 {
+            color: #0056b3;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #fff;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Services</h1>
+    <p>At SriLanka Bus Transport Board Online Reservation, we offer a range of services to meet your travel needs. Explore our offerings below:</p>
+
+    <h2>1. Bus Reservations</h2>
+    <p>Book your bus tickets online with ease. Choose from various routes and schedules to find the best option for your journey.</p>
+
+    <h2>2. Seat Selection</h2>
+    <p>Enjoy the flexibility of selecting your preferred seat when making a reservation. Choose from available options to ensure a comfortable trip.</p>
+
+    <h2>3. Customer Support</h2>
+    <p>Our dedicated support team is available to assist you with any questions or issues you may have. Contact us via email or phone for prompt assistance.</p>
+
+    <h2>4. Travel Updates</h2>
+    <p>Stay informed with real-time updates on your bus schedule, delays, and other important information directly through our platform.</p>
+</body>
+</html>

@@ -1,0 +1,51 @@
+#resultsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards horizontally */
+    gap: 20px; /* Add space between cards */
+}
+
+.route-card {
+    background-color: #000000;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px; /* Limit card width */
+    text-align: center; /* Center text inside card */
+}
+
+.route-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.route-card h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.route-card p {
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.route-card .btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.route-card .btn:hover {
+    background-color: #0056b3;
+}
+
+.bus-details {
+    margin-top: 10px;
+}

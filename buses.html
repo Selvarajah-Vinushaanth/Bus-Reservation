@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking</title>
+    <link rel="stylesheet" href="buses.css">
+    <link rel="icon" href="bus129_89.jpeg">
+    <style>
+        html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 100000px;
+    margin: auto;
+    background-color: #f4f4f9;
+    color: #000000;
+    position: relative; /* Ensure the pseudo-element is positioned relative to the body */
+    /* overflow: hiddenPrevent scrollbars from showing if the pseudo-element is larger */
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Use fixed positioning to cover the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ensure it covers the full viewport width */
+    height: 100vh; /* Ensure it covers the full viewport height */
+    background-image: url('image.jpg');
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center;
+    filter: blur(8px); /* Adjust the blur intensity */
+    z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+        .hidden { display: none; }
+        .route-card { border: 5px solid #823232; padding: 16px; margin: 16px 0; border-radius: 8px; }
+        .route-card img { max-width: 100%; height: auto; border-radius: 8px; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(157, 23, 23, 0.5); justify-content: center; align-items: center; }
+        .modal-content { background: #5b4848; padding: 20px; border-radius: 8px; width: 80%; max-width: 600px; }
+        .modal-header, .modal-body, .modal-footer { margin-bottom: 16px; }
+        .modal-footer { text-align: right; }
+        .btn { padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+        .btn-primary { background-color: #007bff; color: #fff; }
+        .btn-secondary { background-color: #6c757d; color: #fff; }
+    </style>
+</head>
+<body>
+    <section id="searchResults" class="hidden">
+        <h2>Available Buses</h2>
+        <div id="resultsContainer">
+            <!-- Search results will be displayed here -->
+        </div>
+    </section>
+
+    <!-- Modal for Seat Booking -->
+    <div id="seatModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Seat Availability</h2>
+                <button id="closeModal" class="btn btn-secondary">Close</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Seat details will be injected here -->
+            </div>
+            <div class="modal-footer">
+                <button id="bookSeatButton" class="btn btn-primary" onclick="seats(1)">Book Seat</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="buses.js"></script>
+</body>
+</html>

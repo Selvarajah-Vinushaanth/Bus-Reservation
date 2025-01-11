@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Bus Reservation System</title>
+    <link rel="icon" href="bus129_89.jpeg">
+    <style>
+        html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #f4f4f9;
+    color: #000000;
+    position: relative; /* Ensure the pseudo-element is positioned relative to the body */
+    /* overflow: hidden Prevent scrollbars from showing if the pseudo-element is larger */
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Use fixed positioning to cover the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ensure it covers the full viewport width */
+    height: 100vh; /* Ensure it covers the full viewport height */
+    background-image: url('image.jpg');
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center;
+    filter: blur(8px); /* Adjust the blur intensity */
+    z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+        h1, h2 {
+            color: #0056b3;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>About Us</h1>
+    <p>Welcome to SriLanka Bus Transport Board Online Reservation. We are dedicated to providing a seamless and efficient bus reservation experience. Our mission is to make travel easy and accessible for everyone.</p>
+
+    <h2>Our Story</h2>
+    <p>Founded in 1974, our company has grown to become a leading provider of bus reservation services. We started with a simple goal: to improve the travel experience for our customers through technology and exceptional service.</p>
+
+    <h2>Our Team</h2>
+    <p>Our team is made up of dedicated professionals who are passionate about transportation and customer service. With years of experience and a commitment to excellence, we strive to ensure that every journey is smooth and enjoyable.</p>
+
+    <h2>Our Values</h2>
+    <ul>
+        <li><strong>Customer Satisfaction:</strong> We prioritize the needs of our customers and work hard to exceed their expectations.</li>
+        <li><strong>Innovation:</strong> We continuously seek new ways to improve our services and technology.</li>
+        <li><strong>Integrity:</strong> We operate with transparency and honesty in all our interactions.</li>
+    </ul>
+</body>
+</html>

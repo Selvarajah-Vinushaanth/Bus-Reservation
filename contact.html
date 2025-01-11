@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Bus Reservation System</title>
+    <link rel="icon" href="bus129_89.jpeg">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background-color: #f4f4f9;
+            color: #000000;
+            position: relative; /* Ensure the pseudo-element is positioned relative to the body */
+        }
+
+        body::before {
+            content: "";
+            position: fixed; /* Use fixed positioning to cover the viewport */
+            top: 0;
+            left: 0;
+            width: 100vw; /* Ensure it covers the full viewport width */
+            height: 100vh; /* Ensure it covers the full viewport height */
+            background-image: url('image.jpg');
+            background-size: cover; /* Ensure the image covers the entire area */
+            background-position: center;
+            filter: blur(8px); /* Adjust the blur intensity */
+            z-index: -1; /* Place the pseudo-element behind the content */
+        }
+
+        h1, h2 {
+            color: #0056b3;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: #0056b3;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #004494;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <p>If you have any questions or need assistance, please feel free to reach out to us. We are here to help!</p>
+
+    <h2>Contact Information</h2>
+    <p><strong>Email:</strong> SLTB123@gmail.com</p>
+    <p><strong>Phone:</strong> +9469940455</p>
+    <p><strong>Address:</strong> Sri Lanka Transport Board (SLTB)
+        Head Office
+        106, Deans Road, Colombo 10, Sri Lanka</p>
+
+    <h2>Send Us a Message</h2>
+    <form action="[Form Handling URL]" method="post" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+    
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            if (!name || !email || !message) {
+                alert('Please fill in all fields.');
+                return false; // Prevent form submission
+            }
+            // Redirect to another page if needed after validation
+            event.preventDefault(); 
+            window.location.href = "msg.html";
+            return true; // Allow form submission
+        }
+    </script>
+</body>
+</html>
